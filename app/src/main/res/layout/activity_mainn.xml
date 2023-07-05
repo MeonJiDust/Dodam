@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linlin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grid2"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="16dp">
+
+    <TabHost
+        android:id="@+id/host"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f4c4f3"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <LinearLayout
+                            android:id="@+id/line"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="320"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/main_txt"
+                                android:layout_width="0dip"
+                                android:layout_height="32dip"
+                                android:layout_weight="500"
+                                android:gravity="center"
+                                android:text="!미션 성공 리스트!"
+                                android:textColor="#FD93FB"
+                                android:textSize="25dip"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="530dp"
+                        android:layout_weight="1000">
+
+                        <FrameLayout
+                            android:id="@+id/frame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ListView
+                                android:id="@+id/s_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="25dp"
+                                android:divider="#00000000"
+                                android:dividerHeight="15dip"
+                                android:fadingEdge="none"
+                                android:listSelector="#FFFFFF"
+                                android:scrollbars="none"
+                                android:scrollingCache="false"></ListView>
+
+                            <TextView
+                                android:id="@+id/nodata"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="검색결과가 없습니다"
+                                android:textColor="#000000"
+                                android:textSize="16dip"
+                                android:visibility="invisible"></TextView>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/plus"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="180dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/plus" />
+
+                        <Button
+                            android:id="@+id/more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/button_pink"
+                            android:text="재시도!" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fffcdc">
+
+                    <LinearLayout
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="120dp"
+                            android:background="@drawable/missioncalender" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="430dp"
+                        android:layout_below="@id/line1"
+                        android:background="@drawable/border3"
+                        android:backgroundTint="#f4c4f3">
+
+                        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title"
+
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="#fffcdc"
+                            app:mcv_arrowColor="#f4c4f3"
+                            app:mcv_selectionColor="#72FBD7"
+                            app:mcv_showOtherDates="all" />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/line2"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/dinosor" />
+
+                    <Button
+                        android:id="@+id/photo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/line2"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/photo"
+
+                        />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </TabHost>
+</LinearLayout>

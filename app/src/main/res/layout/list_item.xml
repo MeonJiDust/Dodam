@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="118dp"
+    android:layout_height="163dp"
+    android:background="#595757"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="115dp"
+        android:layout_height="160dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+            <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:background="@drawable/pin" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/edittitle"
+            android:layout_width="105dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/editmemo"
+            android:layout_width="105dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+
+    </LinearLayout>
+</LinearLayout>

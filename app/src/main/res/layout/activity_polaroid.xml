@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Polaroid"
+    android:orientation="vertical"
+    android:background="@drawable/corkboard2">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#f4c4f3"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip">
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="320"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/main_txt"
+                android:layout_width="0dip"
+                android:layout_height="32dip"
+                android:layout_weight="500"
+                android:gravity="center" android:text="POLAROID"
+                android:textColor="#ffffff"
+                android:textSize="23dip" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:background="@drawable/icon_back"
+                android:textColor="#ffffff"></Button>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right">
+
+            <Button
+                android:id="@+id/home"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:background="@drawable/btn_home"
+                android:textColor="#ffffff"></Button>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1000">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/viv"
+                android:layout_weight="1">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/nodata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="검색결과가 없습니다."
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:visibility="invisible">
+            </TextView>
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
